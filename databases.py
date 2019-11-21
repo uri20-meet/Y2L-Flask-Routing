@@ -39,3 +39,6 @@ def add_to_cart(productID):
 		productID = productID)
 	session.add(cart)
 	session.commit()
+
+# add_product("product1", 39.99, "static/product1.jpg", "product 1 is surely the best product you will ever find")
+# add_product("product2", 19.99, "static/product1.jpg", "product 2 is just a bit better than product 1 I swear")

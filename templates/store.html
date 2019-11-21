@@ -40,11 +40,13 @@
 <br>
 
 <div class="card">
-	<img src="jeans3.jpg" alt="made by uri" style="width:100%">
+	<img src="static/product1.jpg" alt="made by uri" style="width:100%">
 	<h1>PRODUCT 1</h1>
 	<p class="price">$39.99</p>
 	<p>product 1 is surely the best product you will ever find</p>
-<a href="/store/cart"><p><button>Add to Cart</button></p></a>
+<form action="/cart" method="POST">
+	<p><button type="submit">Add to Cart</button></p>
+</form>
 </div> 
 
 <br>
@@ -52,7 +54,7 @@
 <br>
 
 <div class="card">
-	<img src="jeans3.jpg" alt="made by uri" style="width:100%">
+	<img src="static/product1.jpg" alt="made by uri" style="width:100%">
 	<h1>PRODUCT 2</h1>
 	<p class="price">$19.99</p>
 	<p>product 2 is just a bit better than product 1 I swear</p>
