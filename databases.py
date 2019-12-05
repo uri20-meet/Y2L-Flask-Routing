@@ -1,4 +1,4 @@
-from model import Base, Product
+from model import Base, Product, Cart
 
 
 from sqlalchemy import create_engine
@@ -34,11 +34,16 @@ def get_all_products():
 def get_by_id(id):
 	return(session.query(Product).filter_by(id = id))
 
+def get_by_name(name):
+	return(session.query(Product).filter_by(name = name))
+
 def add_to_cart(productID):
-	cart = Cart(
-		productID = productID)
+	cart = Cart(productID = productID)
 	session.add(cart)
 	session.commit()
+
+def get_cart():
+	return(session.query(Cart).all())
 
 # add_product("product1", 39.99, "static/product1.jpg", "product 1 is surely the best product you will ever find")
 # add_product("product2", 19.99, "static/product1.jpg", "product 2 is just a bit better than product 1 I swear")

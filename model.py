@@ -13,7 +13,7 @@ class Product(Base):
 	description = Column(String)
 
 	def __repr__(self):
-		return("productID: {} \n"
+		return("productId: {} \n"
 			"name: {} \n"
 			"price: {} \n"
 			"pictureLink: {} \n"
@@ -26,7 +26,13 @@ class Product(Base):
 
 class Cart(Base):
 	"""docstring for ClassName"""
-	__tablename__ = 'carts'
-	cartID = Column(Integer, primary_key = True)
+	__tablename__ = 'Cart'
+	ID = Column(Integer, primary_key = True)
 	productID = Column(Integer)
+
+	def __repr__(self):
+		return("ID: {} \n"
+			"productID: {} \n"
+			).format(self.ID, self.productID)
+
 

@@ -4,9 +4,28 @@
 	<title>Home</title>
 </head>
 <body>
+{% if loggedIn %}
+	<p>Hi {{username}}</p>
+{% else: %}
+	<a href="/login">LOG IN</a>
+{% endif %}
+
+<br>
 <h1> To buy stuff use the store </h1>
 <a href="/store">STORE</a>
 <h1> To learn about us go to the "about" page</h1>
 <a href="/about">ABOUT</a>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="/portal">PORTAL</a>
+
 </body>
 </html>
